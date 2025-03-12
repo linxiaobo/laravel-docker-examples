@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AgeController;
+
 Route::get('/', function () {
     Log::info('Welcome page visited');
     return view('welcome');
@@ -63,3 +65,5 @@ Route::get('/health', function () {
 
     return response()->json($status, $httpStatus);
 });
+
+Route::get('/age', [AgeController::class, 'index']);

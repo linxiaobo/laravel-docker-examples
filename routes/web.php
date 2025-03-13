@@ -67,3 +67,5 @@ Route::get('/health', function () {
 });
 
 Route::get('/age', [AgeController::class, 'index']);
+
+Route::get('/age/show', [AgeController::class, 'show']);
